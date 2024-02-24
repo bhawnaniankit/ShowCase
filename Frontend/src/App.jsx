@@ -3,6 +3,7 @@ import './App.css'
 import { SignUp } from '../components/signup'
 import { Header } from '../components/Header'
 import { BrowserRouter } from 'react-router-dom'
+import { LogIn } from '../components/login'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className='signup-container'>
         <SignUp></SignUp>
       </div>
+      <LogIn />
     </>
   )
 }

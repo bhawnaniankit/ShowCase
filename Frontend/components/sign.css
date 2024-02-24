@@ -39,11 +39,17 @@
     align-content: center;
 }
 
+.alert {
+    color: red;
+    text-decoration: underline;
+}
+
 .signup-btn {
     color: black;
     background: transparent;
     backdrop-filter: blur(50px);
     width: 170px;
+    height: 30px;
 }
 
 .signup-btn:hover {

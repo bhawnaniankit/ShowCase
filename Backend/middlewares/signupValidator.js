@@ -3,7 +3,7 @@ const { signupSchema } = require("../schema.js")
 
 function signupValidator(req, res, next) {
     const payload = req.body;
-    // console.log(payload);
+    console.log(payload);
     const parsePayload = signupSchema.safeParse(payload);
     // console.log(parsePayload);
     if (!parsePayload.success) {
