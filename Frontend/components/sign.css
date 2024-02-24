@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.SignUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    width: 300px;
+    backdrop-filter: blur(5px);
+    padding: 50px 150px;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.signup-input::placeholder {
+    color: black;
+}
+
+.signup-input {
+    background: transparent;
+    /* backdrop-filter: blur(10px); */
+}
+
+.btn-div {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.signup-btn {
+    color: black;
+    background: transparent;
+    backdrop-filter: blur(50px);
+}
+
+.signup-btn:hover {
+    scale: 1.1;
+    display: inline-block;
+    transition: 100ms;
+}
