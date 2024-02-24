@@ -27,6 +27,10 @@
     border-radius: 50%;
 }
 
+.nav {
+    text-decoration: none;
+}
+
 .nav:hover {
     text-decoration: underline;
     cursor: pointer;

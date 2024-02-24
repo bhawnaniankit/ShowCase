@@ -20,8 +20,11 @@ export function SignUp() {
         <p className="alert">{password == password1 ? "" : "Password Does'nt Match"}</p>
         <div className="btn-div">
             <button className="signup-btn" onClick={async () => {
-                const res = await axios.post("http://localhost:3000/sign-up", { name: name, email: email, password: password });
+                const res = await axios.post("http://localhost:3000/sign-up", { name: name, email: email, password: password }, {
+                    withCredentials: true
+                });
                 console.log(res);
+                alert("Sign Up Success Fully")
             }}>Sign Up</button>
         </div>
     </div>
