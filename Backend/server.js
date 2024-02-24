@@ -52,7 +52,7 @@ app.get("/log-in", async (req, res) => {
         console.log("Logged in from cookie")
     } catch (err) {
         const payload = req.query;
-        // console.log(payload);
+        console.log(payload);
         let match = false;
         // console.log(user);
         const user = await Users.find({
@@ -67,10 +67,13 @@ app.get("/log-in", async (req, res) => {
         if (!match) {
             return res.status(401).json({ msg: "Bad Credentials" });
         }
+        console.log("Before Cookie Sending")
         res.cookie("jwtData", jwt.sign({
-            name: req.body.name,
-            email: req.body.email
+            name: req.params.name,
+            email: req.params.email
         }, process.env.jwtPass));
+        console.log("After Cookie Sending")
+
         res.json({ msg: "Log in Success" })
         // app logic send next page 
     }
