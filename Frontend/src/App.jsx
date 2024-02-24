@@ -2,13 +2,17 @@ import { useState } from 'react'
 import './App.css'
 import { SignUp } from '../components/signup'
 import { Header } from '../components/Header'
+import { BrowserRouter } from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className='bg'>
+    <>
       <Header></Header>
-      <SignUp></SignUp>
-    </div>
+      <div className='signup-container'>
+        <SignUp></SignUp>
+      </div>
+    </>
   )
 }
 

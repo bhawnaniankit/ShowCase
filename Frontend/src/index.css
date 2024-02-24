@@ -1,8 +1,5 @@
 #root {
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    background: url("./assets/download.jpg");
-    /* background-repeat: no-repeat; */
+    background: url("./assets/photo_2024-02-24_21-17-16.jpg");
+    background-repeat: no-repeat;
     /* height: 100%; */
 }
