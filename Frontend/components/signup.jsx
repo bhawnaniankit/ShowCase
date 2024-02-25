@@ -21,10 +21,16 @@ export function SignUp() {
         <input type="password" placeholder="Confirm Password" className="signup-input" required onChange={(e) => { setPassword1(e.target.value) }} />
         <div className="btn-div">
             <button className="signup-btn" onClick={async () => {
-                const res = await axios.post("http://localhost:3000/sign-up", { name: name, email: email, password: password }, {
-                    withCredentials: true
-                });
-                console.log(res);
+                try {
+                    const res = await axios.post("http://localhost:3000/sign-up", { name: name, email: email, password: password }, {
+                        withCredentials: true
+                    });
+                    console.log(res);
+                }
+                catch (err) {
+                    alert(err.response.data.msg);
+                    return console.log(err.response.data.msg);
+                }
                 alert("Sign Up Success Fully")
             }}>Sign Up</button>
         </div>

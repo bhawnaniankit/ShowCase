@@ -18,9 +18,15 @@ export function LogIn() {
             <input type="password" placeholder="Password" className="signup-input" onChange={(e) => { setPassword(e.target.value) }} />
             <div className="btn-div">
                 <button className="signup-btn" onClick={async () => {
-                    const res = await axios.get("http://localhost:3000/log-in", { params: { name: name, email: email, password: password } });
-                    console.log(res);
-                    alert("Successfully Logged In")
+                    try {
+                        const res = await axios.get("http://localhost:3000/log-in", { params: { name: name, email: email, password: password } });
+                        console.log(res);
+                    }
+                    catch (err) {
+                        alert(err.response.data.msg);
+                        return console.log(err.response.data.msg);
+                    }
+                    alert("Successfully Logged In");
                 }}>Log In</button>
             </div>
         </div>
