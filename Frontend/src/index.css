@@ -1,5 +1,6 @@
 #root {
     background: url("./assets/photo_2024-02-24_21-17-16.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     /* height: 100%; */
 }

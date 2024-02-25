@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { SignUp } from '../components/signup.jsx'
 import { Header } from '../components/Header.jsx'
 import { LogIn } from '../components/login.jsx'
+import { Footer } from '../components/footer.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       <div style={{ display: "flex", justifyContent: "center" }} className='signup-container'>
         <SignUp></SignUp>
       </div>
+      <Footer></Footer>
     </>
   },
   {
@@ -24,6 +26,8 @@ const router = createBrowserRouter([
       <div style={{ display: "flex", justifyContent: "center" }} className='login-container'>
         <LogIn></LogIn>
       </div>
+      <Footer></Footer>
+
     </>
 
   }

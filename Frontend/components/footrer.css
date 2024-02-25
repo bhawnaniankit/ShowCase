@@ -1,0 +1,44 @@
+.container {
+    background: rgb(15, 14, 14);
+    padding: 40px 35px;
+}
+
+.footerContainer {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+.left-app {
+    color: white;
+}
+
+.left,
+.right,
+.middle {
+    color: white;
+}
+
+.logo {
+    height: 50px;
+}
+
+.credits-container {
+    display: flex;
+    justify-content: center;
+}
+
+.credits {
+    color: rgb(78, 78, 77);
+}
+
+ul {
+    list-style: none;
+    font-size: small;
+}
+
+ul li {
+    margin: 5px 0px;
+}
