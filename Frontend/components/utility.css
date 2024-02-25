@@ -9,3 +9,19 @@
 .p18 {
     height: 18px;
 }
+
+.p50 {
+    height: 50px;
+}
+
+.flex {
+    display: flex;
+}
+
+.w600 {
+    font-weight: 600;
+}
+
+.w450 {
+    font-weight: 450;
+}

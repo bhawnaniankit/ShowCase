@@ -21,7 +21,7 @@ const app = express();
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.post("/sign-up", signupValidator, userAlreadyExist, async (req, res) => {
     const hashPassword = await bcrypt.hash(req.body.password, saltRounds);
@@ -64,6 +64,7 @@ app.get("/log-in", async (req, res) => {
             match = bcrypt.compare(payload.password, user[0].password);
         }
         catch {
+            alert("User does'nt Exist")
             return res.status(400).json({ msg: "User Does'nt exist " });
         }
         if (!match) {

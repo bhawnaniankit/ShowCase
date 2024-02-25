@@ -6,9 +6,9 @@
 
 
 .header-container {
-    padding: 0px 20px;
+    padding: 10px 25px;
     display: flex;
-    height: 60pxpx;
+    height: 55px;
     background: rgb(15, 14, 14);
     color: white;
     align-items: center;
@@ -17,22 +17,31 @@
 
 
 .navBar {
-    width: 300px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.navlist {
+    align-items: center;
+    gap: 30px;
 }
 
 .profile {
     border-radius: 50%;
+    height: 35px;
 }
 
 .nav {
     text-decoration: none;
-    color: azure;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: white;
 }
 
 .nav:hover {
     text-decoration: underline;
     cursor: pointer;
+    transition: .15s;
 }

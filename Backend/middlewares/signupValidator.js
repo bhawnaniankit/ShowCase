@@ -7,6 +7,7 @@ function signupValidator(req, res, next) {
     const parsePayload = signupSchema.safeParse(payload);
     // console.log(parsePayload);
     if (!parsePayload.success) {
+        alert("Invalid Input")
         return res.status(400).json({ msg: "Invalid Input" });
     }
 

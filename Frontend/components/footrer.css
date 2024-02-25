@@ -4,15 +4,14 @@
 }
 
 .footerContainer {
-
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: start;
+    justify-content: space-around;
     padding: 0px 30px;
 }
 
 .left-app {
-    color: white;
+    margin-bottom: 20px;
 }
 
 .left,
@@ -37,8 +36,19 @@
 ul {
     list-style: none;
     font-size: small;
+    vertical-align: middle;
 }
 
 ul li {
-    margin: 5px 0px;
+    margin: 3px 0px;
+    font-family: sans-serif;
+    vertical-align: middle;
+}
+
+ul li:hover {
+    cursor: pointer;
+}
+
+.heading {
+    margin-bottom: 20px;
 }

@@ -7,13 +7,15 @@ export function Header() {
 
     return <>
         <div className="header-container">
-            <div>
-                <img src="../src/assets/radio-round-svgrepo-com (2).svg" alt="logo" className="app-Logo" />
-            </div>
+
             <div className="navBar">
-                <div><Link className='nav' to='/' >Home</Link></div>
-                <div><Link className='nav' to='/' >Sign Up</Link></div>
-                <div><Link className='nav' to='/log-in'>Log In</Link></div>
+                <img src="../src/assets/radio-round-svgrepo-com (2).svg" alt="logo" className="app-Logo" />
+                <ul className='flex navlist'>
+                    <li><Link className='nav' to='/' >Home</Link></li>
+                    <li><Link className='nav' to='/' >Sign Up</Link></li>
+                    <li><Link className='nav' to='/log-in'>Log In</Link></li>
+                    <li><Link className='nav' to='/ContactUs'>Contact Us</Link></li>
+                </ul>
             </div>
             <div >
                 <img className="profile" src={profile_url} alt="profile" />

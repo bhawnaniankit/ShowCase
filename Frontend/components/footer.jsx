@@ -4,9 +4,14 @@ import './utility.css'
 export function Footer() {
     return <div className='container'>
         <div className="footerContainer">
-            <strong className='left-app'>SHOWCASE</strong>
+            <div>
+                <p className="left-app">
+                    <strong className='white'>SHOWCASE</strong><br />
+                </p>
+                <img src="../src/assets/radio-round-svgrepo-com (2).svg" alt="app-;ogo" className='p50' />
+            </div>
             <div className="left">
-                <p className="heading underline">Services</p>
+                <h3 className="heading">Services</h3>
                 <ul className='white'>
                     <li>Sign Up</li>
                     <li>Log In</li>
@@ -14,7 +19,7 @@ export function Footer() {
                 </ul>
             </div>
             <div className="middle">
-                <p className='underline'>Socials</p>
+                <h3 className='heading'>Socials</h3>
                 <ul>
                     <li><span >Instagram</span></li>
                     <li><span>Twitter</span></li>
@@ -23,8 +28,19 @@ export function Footer() {
                 </ul>
             </div>
             <div className="right">
-                {/* <img src="../src/assets/radio-round-svgrepo-com (2).svg" alt="img logo" className="logo" /> */}
-                <p>right</p>
+                <h3 className="heading">Contacts</h3>
+                <ul>
+                    <li>Tiruppur Palladam Rd, Karuppa Gaundanpalayam <br />
+                        Tiruppur,641604,India
+                    </li>
+                    <li>Mobile <br />
+                        +91-95736*****
+                    </li>
+                    <li>Email <br />
+                        ShowCase@gmail.com
+                    </li>
+
+                </ul>
             </div>
         </div>
 
