@@ -18,7 +18,7 @@ export function SignUp() {
         }} />
         <input type="email" placeholder="Email" className="signup-input" required onChange={(e) => { setEmail(e.target.value) }} />
         <input type="password" placeholder="Password" className="signup-input" required onChange={(e) => { setPassword(e.target.value) }} />
-        <input type="password" placeholder="Confirm Passwword" className="signup-input" required onChange={(e) => { setPassword1(e.target.value) }} />
+        <input type="password" placeholder="Confirm Password" className="signup-input" required onChange={(e) => { setPassword1(e.target.value) }} />
         <div className="btn-div">
             <button className="signup-btn" onClick={async () => {
                 const res = await axios.post("http://localhost:3000/sign-up", { name: name, email: email, password: password }, {

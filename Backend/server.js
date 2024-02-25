@@ -40,42 +40,32 @@ app.post("/sign-up", signupValidator, userAlreadyExist, async (req, res) => {
 });
 
 app.get("/log-in", async (req, res) => {
-    // const { cookies } = req;
     const cookies = req.headers.cookie;
-    console.log(req.headers);
-    // console.log(cookies);
-
-    // console.log(cookies.substr(8));
-
     try {
         let decoded = jwt.verify(cookies.substr(8), process.env.jwtPass);
         res.json({ msg: decoded });
         // app logic send next page 
         console.log("Logged in from cookie")
     } catch (err) {
-        const payload = req.headers;
+        const payload = req.query;
         console.log(payload);
         let match = false;
-        // console.log(user);
         const user = await Users.find({
             name: payload.name
         });
         try {
-            match = bcrypt.compare(payload.password, user[0].password);
+            match = await bcrypt.compare(payload.password, user[0].password);
         }
         catch {
-            alert("User does'nt Exist")
             return res.status(400).json({ msg: "User Does'nt exist " });
         }
         if (!match) {
             return res.status(401).json({ msg: "Bad Credentials" });
         }
-        console.log("Before Cookie Sending")
         res.cookie("jwtData", jwt.sign({
             name: payload.name,
             email: payload.email
         }, process.env.jwtPass));
-        console.log("After Cookie Sending")
 
         res.json({ msg: "Log in Success" })
         // app logic send next page 
