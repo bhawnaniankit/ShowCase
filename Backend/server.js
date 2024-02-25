@@ -21,7 +21,7 @@ const app = express();
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.post("/sign-up", signupValidator, userAlreadyExist, async (req, res) => {
     const hashPassword = await bcrypt.hash(req.body.password, saltRounds);
@@ -42,7 +42,9 @@ app.post("/sign-up", signupValidator, userAlreadyExist, async (req, res) => {
 app.get("/log-in", async (req, res) => {
     // const { cookies } = req;
     const cookies = req.headers.cookie;
-    console.log(cookies);
+    console.log(req.headers);
+    // console.log(cookies);
+
     // console.log(cookies.substr(8));
 
     try {
@@ -51,7 +53,7 @@ app.get("/log-in", async (req, res) => {
         // app logic send next page 
         console.log("Logged in from cookie")
     } catch (err) {
-        const payload = req.query;
+        const payload = req.headers;
         console.log(payload);
         let match = false;
         // console.log(user);
@@ -69,8 +71,8 @@ app.get("/log-in", async (req, res) => {
         }
         console.log("Before Cookie Sending")
         res.cookie("jwtData", jwt.sign({
-            name: req.params.name,
-            email: req.params.email
+            name: payload.name,
+            email: payload.email
         }, process.env.jwtPass));
         console.log("After Cookie Sending")
 
