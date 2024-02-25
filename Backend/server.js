@@ -34,6 +34,7 @@ app.post("/sign-up", signupValidator, userAlreadyExist, async (req, res) => {
         name: req.body.name,
         email: req.body.email
     }, process.env.jwtPass));
+    res.redirect("https://localhost:5137/home");
     res.json({
         msg: "User Created"
     });
@@ -66,8 +67,9 @@ app.get("/log-in", async (req, res) => {
             name: payload.name,
             email: payload.email
         }, process.env.jwtPass));
+        // res.redirect("localhost:5173/home");
 
-        res.json({ msg: "Log in Success" })
+        res.json({ msg: "Log in Success" });
         // app logic send next page 
     }
 });

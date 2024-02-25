@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./sign.css"
 import axios from "axios";
 
+axios({ maxRedirects: 10 });
 export function LogIn() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -23,6 +24,8 @@ export function LogIn() {
                         console.log(res);
                     }
                     catch (err) {
+                        console.log(err);
+                        // return;
                         alert(err.response.data.msg);
                         return console.log(err.response.data.msg);
                     }

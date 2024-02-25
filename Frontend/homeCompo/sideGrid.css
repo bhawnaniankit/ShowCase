@@ -3,7 +3,13 @@
     gap: 30px;
     height: 700px;
     align-items: start;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    padding-left: 10px;
+    border-radius: 10px;
+    max-width: 750px;
 }
 
 ::-webkit-scrollbar {
@@ -12,7 +18,12 @@
 
 
 .postimg {
-    width: 300px;
+    width: 100%;
+    min-width: 200px;
+}
+
+.caption {
+    max-width: 300px;
 }
 
 .caption p {
@@ -36,4 +47,13 @@
 
 .postimgcontainer {
     overflow: hidden;
+    width: 100%;
+}
+
+@media only screen and (max-width: 910px) {
+
+    .gridContainer {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -9,6 +9,7 @@
     text-align: center;
     overflow: hidden;
     border-radius: 5px;
+    min-width: 500px;
 }
 
 .image-container {
@@ -29,6 +30,16 @@
     padding: 0px;
     position: relative;
     border-radius: 5px;
+    object-fit: cover;
+}
+
+.test {
+    position: absolute;
+    top: 90%;
+    left: 250px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 #slide-1:target~.image-container {

@@ -9,8 +9,7 @@ export function SideGrid() {
                         <img src="../src/assets/grid4.png" className="postimg" alt="" />
                     </div>
                     <div className="caption">
-                        <p><strong>bhawnani_21</strong></p>
-                        <p>Hi there this is <strong>Ankit Bhawnani</strong> the developer <br />of this application. This Section is for posts. <br /> Suggested by the backend according to the user's <br /> perfered genre.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa possimus quia dolores, vel accusamus ea ad repellendus officiis ab assumenda odit quibusdam voluptate voluptatum doloremque libero impedit dolor reiciendis cumque.</p>
                     </div>
                 </div>
                 <div className="post">
@@ -18,8 +17,7 @@ export function SideGrid() {
                         <img src="../src/assets/grid1.webp" className="postimg" alt="" />
                     </div>
                     <div className="caption">
-                        <p><strong>bhawnani_21</strong></p>
-                        <p>Hi there this is <strong>Ankit Bhawnani</strong> the developer <br />of this application. This Section is for posts. <br /> Suggested by the backend according to the user's <br /> perfered genre.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa possimus quia dolores, vel accusamus ea ad repellendus officiis ab assumenda odit quibusdam voluptate voluptatum doloremque libero impedit dolor reiciendis cumque.</p>
                     </div>
                 </div>
             </div>
@@ -29,8 +27,7 @@ export function SideGrid() {
                         <img src="../src/assets/grid2.webp" className="postimg" alt="" />
                     </div>
                     <div className="caption">
-                        <p><strong>bhawnani_21</strong></p>
-                        <p>Hi there this is <strong>Ankit Bhawnani</strong> the developer <br />of this application. This Section is for posts. <br /> Suggested by the backend according to the user's <br /> perfered genre.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa possimus quia dolores, vel accusamus ea ad repellendus officiis ab assumenda odit quibusdam voluptate voluptatum doloremque libero impedit dolor reiciendis cumque.</p>
                     </div>
                 </div>
                 <div className="post">
@@ -38,8 +35,7 @@ export function SideGrid() {
                         <img src="../src/assets/grid3.webp" className="postimg" alt="" />
                     </div>
                     <div className="caption">
-                        <p><strong>bhawnani_21</strong></p>
-                        <p>Hi there this is <strong>Ankit Bhawnani</strong> the developer <br />of this application. This Section is for posts. <br /> Suggested by the backend according to the user's <br /> perfered genre.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa possimus quia dolores, vel accusamus ea ad repellendus officiis ab assumenda odit quibusdam voluptate voluptatum doloremque libero impedit dolor reiciendis cumque.</p>
                     </div>
                 </div>
             </div>

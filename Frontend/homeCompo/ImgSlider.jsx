@@ -11,7 +11,8 @@ export function ImgSlider() {
                 <img src="../src/assets/mypost.jpg" class="slide" width="500" height="700" />
                 <img src="../src/assets/slider3.jpg" class="slide" width="500" height="700" />
                 <img src="../src/assets/slider1.jpg" class="slide" width="500" height="700" />
-                <div>djfhfasdfkasjdhfkjasjkdsj</div>
+                <div className="test"><p><strong>Ankit Bhawnani</strong><br />
+                    Developer of this application</p></div>
             </div>
             <div class="buttons">
                 <a href="#slide-1"></a>
