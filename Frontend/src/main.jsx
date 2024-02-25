@@ -4,6 +4,9 @@ import { SignUp } from '../components/signup.jsx'
 import { Header } from '../components/Header.jsx'
 import { LogIn } from '../components/login.jsx'
 import { Footer } from '../components/footer.jsx'
+import { ImgSlider } from '../homeCompo/ImgSlider.jsx'
+import { SideGrid } from '../homeCompo/sideGrid.jsx'
+import { Home } from '../pages/home.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -29,7 +32,17 @@ const router = createBrowserRouter([
       <Footer></Footer>
 
     </>
-
+  },
+  {
+    path: "/home",
+    element: <div className='mainDiv'>
+      <Header></Header>
+      <div className='homeContainer'>
+        <ImgSlider></ImgSlider>
+        <SideGrid></SideGrid>
+      </div>
+      <Footer></Footer>
+    </div>
   }
 ]);
 

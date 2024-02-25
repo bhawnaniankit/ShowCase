@@ -1,6 +1,6 @@
 const express = require("express");
 require('dotenv').config();
-const { Users } = require("./db.js");
+const { Users, Urls } = require("./db.js");
 const signupValidator = require("./middlewares/signupValidator.js");
 const bcrypt = require('bcrypt');
 const cookieParser = require("cookie-parser");
@@ -72,6 +72,22 @@ app.get("/log-in", async (req, res) => {
     }
 });
 
+app.post("/addUrl", (req, res) => {
+    Urls.create({
+        genre: req.body.genre,
+        url: req.body.url
+    });
+    res.json({ msg: "Url Added" });
+});
+app.get("/imgUrls", async (req, res) => {
+    const genre = req.query.genre;
+    const data = await Urls.find({ genre: genre });
+    let urlsToSend = [];
+    for (let i = 1; i < req.query.number; i++) {
+        urlsToSend.push(data[(Math.floor(Math.random() * data.length))]);
+    }
+    res.json({ urls: urlsToSend });
+});
 app.listen(PORT, () => {
     console.log(`Listening on port:${PORT}`);
 })

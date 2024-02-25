@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { array } = require("zod");
 require("dotenv").config()
 
 const dbLink = process.env.dbLink;
@@ -10,9 +11,14 @@ const userSchema = mongoose.Schema({
     email: String,
     password: String
 });
-
+const urlSchema = mongoose.Schema({
+    genre: String,
+    url: String
+});
 const Users = mongoose.model("Users", userSchema);
+const Urls = mongoose.model("Imgurl", urlSchema);
 
 module.exports = {
-    Users
+    Users,
+    Urls
 }

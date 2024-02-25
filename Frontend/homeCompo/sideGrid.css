@@ -1,0 +1,39 @@
+.gridContainer {
+    display: flex;
+    gap: 30px;
+    height: 700px;
+    align-items: start;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+.postimg {
+    width: 300px;
+}
+
+.caption p {
+    font-family: Quattrocento Sans;
+    padding: 4px 0px;
+}
+
+.post {
+    background-color: rgb(15, 14, 14);
+    padding: 0px 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+
+.postimgcontainer img {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.postimgcontainer {
+    overflow: hidden;
+}
