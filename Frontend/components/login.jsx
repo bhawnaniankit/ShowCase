@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./sign.css"
 import axios from "axios";
 
-axios({ maxRedirects: 10 });
 export function LogIn() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");

@@ -34,7 +34,7 @@ app.post("/sign-up", signupValidator, userAlreadyExist, async (req, res) => {
         name: req.body.name,
         email: req.body.email
     }, process.env.jwtPass));
-    res.redirect("https://localhost:5137/home");
+    // res.redirect("https://localhost:5137/home");
     res.json({
         msg: "User Created"
     });
