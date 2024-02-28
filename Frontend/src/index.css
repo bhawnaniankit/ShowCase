@@ -8,18 +8,23 @@
 
 .mainDiv {
     background: url("./assets/mainbgg.avif");
-    background-size: 100%;
+    /* background-repeat: repeat; */
+    height: 100vh;
+    width: 100vw;
+    /* background-size: 100%; */
 }
 
 .homeContainer {
+
     display: flex;
+    /* width: 40vw; */
     align-items: flex-start;
     justify-content: space-around;
     gap: 20px;
-    margin: 20px 20px;
+    margin: 20px 0px;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 700px) {
 
     .homeContainer {
         display: flex;

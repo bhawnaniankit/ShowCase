@@ -1,21 +1,24 @@
 .slider {
-    width: 500px;
+    width: 44%;
     height: 700px;
     background-color: black;
-    padding: 3px;
+    position: relative;
+    margin-left: 15px;
+    /* padding: 3px; */
     /* margin-left: auto;
     margin-right: auto; */
     margin-top: 0px;
     text-align: center;
     overflow: hidden;
     border-radius: 5px;
-    min-width: 500px;
+    /* min-width: 500px; */
 }
 
 .image-container {
-    width: 1500px;
+    text-align: center;
+    width: 100%;
     background-color: transparent;
-    height: 700px;
+    height: 100%;
     clear: both;
     position: relative;
     -webkit-transition: left 2s;
@@ -31,7 +34,9 @@
     position: relative;
     border-radius: 5px;
     object-fit: cover;
-    min-width: 100px;
+    height: 100%;
+    width: 100%;
+    /* min-width: 100px; */
 }
 
 .test {
@@ -56,14 +61,33 @@
 }
 
 .buttons {
-    position: relative;
-    top: -20px;
+    position: absolute;
+    /* top: -20px; */
+    /* background-color: blue; */
+    bottom: 4px;
+    right: 50%;
 }
 
 .buttons a {
     display: inline-block;
+    /* position: absolute; */
     height: 15px;
     width: 15px;
     border-radius: 50px;
-    background-color: lightgreen;
+    background-color: red;
+    /* z-index: 5; */
+}
+
+@media only screen and (max-width: 1110px) {
+
+    .slider {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .slider {
+        width: 95%;
+    }
 }
